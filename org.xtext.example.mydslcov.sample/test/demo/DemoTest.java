@@ -7,7 +7,8 @@ public class DemoTest {
 	@Test
 	public void testIt() {
 		Greeter_sample.main(new String[] {});
-		System.out.println(Dully.class);
+		Dully.main(new String[] {});
+		Demo.main(new String[] {});
 	}
 
 }
