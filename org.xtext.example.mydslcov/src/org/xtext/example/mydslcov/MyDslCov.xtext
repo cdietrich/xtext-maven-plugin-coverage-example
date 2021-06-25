@@ -1,0 +1,9 @@
+grammar org.xtext.example.mydslcov.MyDslCov with org.eclipse.xtext.common.Terminals
+
+generate myDslCov "http://www.xtext.org/example/mydslcov/MyDslCov"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
