@@ -39,9 +39,8 @@ class MyDslCovGenerator extends AbstractGenerator {
 			public class Greeter_«name» {
 			    public static void main(String[] args) {
 			        «FOR g : model.greetings»
-«««			            «g.compile»
 			            System.out.println("«g._name(true)»");
-			            if (Math.random()<0.2) return;
+«««			            if (Math.random()<0.2) return;
 			        «ENDFOR»
 			    }
 			}
@@ -49,17 +48,17 @@ class MyDslCovGenerator extends AbstractGenerator {
 			
 			
 			
-			fsa.generateTracedFile("demo/Greeter_"+name+"2.java",model, '''
-			package demo;
-			
-			public class Greeter_«name»2 {
-			    public static void doit() {
-			      «FOR g : model.greetings»
-			            «g.compile»
-			      «ENDFOR»
-			    }
-			}
-			''')
+//			fsa.generateTracedFile("demo/Greeter_"+name+"2.java",model, '''
+//			package demo;
+//			
+//			public class Greeter_«name»2 {
+//			    public static void doit() {
+//			      «FOR g : model.greetings»
+//			            «g.compile»
+//			      «ENDFOR»
+//			    }
+//			}
+//			''')
 		}
 		
 		
